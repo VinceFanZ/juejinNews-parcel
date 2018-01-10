@@ -1,0 +1,13 @@
+.loading {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  display: block;
+  width: 12rem;
+  height: 12rem;
+  background-image: url("../../assets/pacman.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-indent: -99999px;
+}
