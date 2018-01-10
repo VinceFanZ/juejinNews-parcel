@@ -4,7 +4,10 @@
   "main": "src/index.js",
   "author": "vince <vincefanz@gmail.com>",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/app.js --out-dir build/output"
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "history": "^4.6.3",
@@ -34,6 +37,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
+    "parcel-bundler": "^1.4.1",
     "postcss-modules": "^1.1.0"
   }
 }
