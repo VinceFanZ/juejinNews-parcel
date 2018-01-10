@@ -14,3 +14,13 @@ ReactDOM.render(
   document.querySelector('#root')
 )
 
+if (module.hot) {
+  module.hot.accept('./containers/rootContainer.js', () => {
+    /* eslint-disable global-require */
+    const NextRootContainer = require('./containers/rootContainer.js').default
+    ReactDOM.render(
+      <NextRootContainer />,
+      document.querySelector('#root')
+    )
+  })
+}
