@@ -36,7 +36,8 @@ class Item extends React.PureComponent {
     return (
       <section className={item.box}>
         <header className={item.header}>
-          <img className={item.face} src={avatarLarge} alt="" />
+          {/* <img className={item.face} src={avatarLarge} alt="" /> */}
+          <span style={{ display: 'none' }}>{ avatarLarge }</span>
           <span>{username}</span>
         </header>
         <section className={item.center}>

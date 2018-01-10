@@ -9,10 +9,10 @@ import configureStore from '../store/configureStore'
 import asyncComponent from '../components/asyncComponent'
 import nav from '../styles/nav.css'
 
-const All = asyncComponent(() => System.import('../views/all'))
-const Frontend = asyncComponent(() => System.import('../views/frontend'))
-const Freebie = asyncComponent(() => System.import('../views/freebie'))
-const Other = asyncComponent(() => System.import('../views/other.js'))
+const All = asyncComponent(() => import('../views/all'))
+const Frontend = asyncComponent(() => import('../views/frontend'))
+const Freebie = asyncComponent(() => import('../views/freebie'))
+const Other = asyncComponent(() => import('../views/other.js'))
 
 const history = createHistory()
 const store = configureStore(history)
