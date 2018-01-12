@@ -5,7 +5,7 @@
   "author": "vince <vincefanz@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "parcel src/index.html",
+    "start": "parcel src/index.html -p 8000",
     "build": "parcel build src/app.js --out-dir build/output"
   },
   "dependencies": {
