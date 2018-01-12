@@ -5,8 +5,9 @@
   "author": "vince <vincefanz@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "parcel src/index.html -p 8000",
-    "build": "parcel build src/app.js --out-dir build/output"
+    "start": "NODE_ENV=development parcel src/index.html -p 8000",
+    "build": "rm -rf build/ & NODE_ENV=production parcel build src/index.html --out-dir build --public-url ./",
+    "eslint": "eslint --format node_modules/eslint-friendly-formatter src/**/*.js"
   },
   "dependencies": {
     "axios": "^0.16.2",

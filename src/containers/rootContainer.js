@@ -37,17 +37,14 @@ const rootContainer = () => (
 )
 
 const NavRoute = ({ activeOnlyWhenExact, to, label }) => (
-  <Route
-    exact={activeOnlyWhenExact}
-    path={to}
-  >
-    { ({ match }) => <NavItem match={match} to={to} label={label} /> }
+  <Route exact={activeOnlyWhenExact} path={to}>
+    {({ match }) => <NavItem match={match} to={to} label={label} />}
   </Route>
 )
 
 const NavItem = ({ match, to, label }) => (
-  <div className={`${nav.item} ${(match ? nav.active : '')}`}>
-    <Link to={to}>{ label }</Link>
+  <div className={`${nav.item} ${match ? nav.active : ''}`}>
+    <Link to={to}>{label}</Link>
   </div>
 )
 
@@ -57,10 +54,22 @@ NavRoute.propTypes = {
   label: PropTypes.string,
 }
 
+NavRoute.defaultProps = {
+  activeOnlyWhenExact: false,
+  to: '/',
+  label: '',
+}
+
 NavItem.propTypes = {
   match: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   to: PropTypes.string,
   label: PropTypes.string,
+}
+
+NavItem.defaultProps = {
+  match: {},
+  to: '/',
+  label: '',
 }
 
 export default rootContainer
