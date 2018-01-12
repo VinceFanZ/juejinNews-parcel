@@ -6,10 +6,10 @@ import Item from '../components/Item'
 
 class All extends React.PureComponent {
   static defaultProps = {
-    history: {}
+    history: {},
   }
   static propTypes = {
-    history: PropTypes.object
+    history: PropTypes.object,
   }
 
   constructor (props) {
@@ -26,8 +26,7 @@ class All extends React.PureComponent {
     this.getData()
   }
 
-  componentWillUnmount () {
-  }
+  componentWillUnmount () {}
 
   onClickToFrontend () {
     this.props.history.push('/frontend')
@@ -46,7 +45,7 @@ class All extends React.PureComponent {
     if (!list) {
       return null
     }
-    return list.map(item => (
+    return list.map((item) => (
       <Item
         key={item.objectId}
         originalUrl={item.originalUrl}
@@ -56,20 +55,16 @@ class All extends React.PureComponent {
         commentsCount={item.commentsCount}
         username={item.user.username}
         avatarLarge={item.user.avatarLarge}
-      />)
-    )
+      />
+    ))
   }
 
   render () {
     return (
       <div>
         <burron onClick={this.onClickToFrontend}>to frontend</burron>
-        {
-          this.state.isLoading && <Loading />
-        }
-        {
-          this.itemsRender()
-        }
+        {this.state.isLoading && <Loading />}
+        {this.itemsRender()}
       </div>
     )
   }

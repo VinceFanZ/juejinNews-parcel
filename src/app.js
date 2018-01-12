@@ -9,7 +9,4 @@ import './styles/index.css'
 
 axiosConfig()
 
-ReactDOM.render(
-  <RootContainer />,
-  document.querySelector('#root')
-)
+ReactDOM.render(<RootContainer />, document.querySelector('#root'))

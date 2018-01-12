@@ -13,8 +13,7 @@ class Frontend extends React.PureComponent {
     this.getData()
   }
 
-  componentWillUnmount () {
-  }
+  componentWillUnmount () {}
 
   async getData () {
     const data = await service.getTimelineData('5562b422e4b00c57d9b94b53')
@@ -29,7 +28,7 @@ class Frontend extends React.PureComponent {
     if (!list) {
       return null
     }
-    return list.map(item => (
+    return list.map((item) => (
       <Item
         key={item.objectId}
         originalUrl={item.originalUrl}
@@ -39,19 +38,15 @@ class Frontend extends React.PureComponent {
         commentsCount={item.commentsCount}
         username={item.user.username}
         avatarLarge={item.user.avatarLarge}
-      />)
-    )
+      />
+    ))
   }
 
   render () {
     return (
       <div>
-        {
-          this.state.isLoading && <Loading />
-        }
-        {
-          this.itemsRender()
-        }
+        {this.state.isLoading && <Loading />}
+        {this.itemsRender()}
       </div>
     )
   }

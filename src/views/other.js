@@ -4,10 +4,10 @@ import { connect } from 'react-redux'
 import { increase, decrease } from '../actions/count'
 
 @connect(
-  state => ({
+  (state) => ({
     number: state.count.number,
   }),
-  { increase, decrease }
+  { increase, decrease },
 )
 class Other extends PureComponent {
   static defaultProps = {
@@ -15,11 +15,13 @@ class Other extends PureComponent {
     increase: () => {},
     decrease: () => {},
   }
+
   static propTypes = {
     number: PropTypes.number,
     increase: PropTypes.func,
     decrease: PropTypes.func,
   }
+
   render () {
     const { number, increase: inc, decrease: dec } = this.props
     return (
