@@ -1,5 +1,5 @@
 {
-  "name": "juejinNews",
+  "name": "juejinNews-parcel",
   "version": "1.0.0",
   "main": "src/index.js",
   "author": "vince <vincefanz@gmail.com>",
@@ -22,7 +22,6 @@
     "redux-logger": "^3.0.6"
   },
   "devDependencies": {
-    "autoprefixer": "^7.2.4",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -38,6 +37,7 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
     "parcel-bundler": "^1.4.1",
+    "postcss-cssnext": "^3.0.2",
     "postcss-modules": "^1.1.0"
   }
 }
